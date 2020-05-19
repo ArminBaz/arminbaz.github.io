@@ -52,14 +52,14 @@
 									</h4></p>
 								<!-- Context -->
 								<p>
-                                    <b> Context:</b> An accepted paper from Professer Daniel Yammins at Stanford to NIPS 2020. The problem they are solving is achieving
+                                    <h3> Context:</h3> An accepted paper from Professer Daniel Yammins at Stanford to NIPS 2020. The problem they are solving is achieving
                                     state of the art results with a network that is more inspired, and similar to, the brain.
 								</p>
 								<br>
 
 								<!-- Motivation -->
 								<p>
-									<b>Motivation:</b> The authors main objective was to create a convolutional artificial neural network (ANN) that was more anatomically correct
+									<h3>Motivation:</h3> The authors main objective was to create a convolutional artificial neural network (ANN) that was more anatomically correct
 									with the alignment of the brain. They want to show that high performance on machine learning tasks can be more inline with neuroscience too. They develop
 									CORnet-S a shallow ANN with four anatomically mapped areas {V1, V2, V4, IT} and recurrent connectivity guided by <a href="https://cbmm.mit.edu/publications/brain-score-which-artificial-neural-network-object-recognition-most-brain">
 									<u>Brain-Score</u></a>. Brain-Score is a behavorial benchmark that scores any ANN on how similar it is to the brain's mechanisms
@@ -73,15 +73,47 @@
 
 								<!-- Methods -->
 								<p>
-									<h4>Method:</h4> There are two main components to discuss <u>CORnet-S</u> and <u>Brain-Score</u>
+									<h3>Method:</h3> There are two main components to discuss <i>CORnet-S</i> and <i>Brain-Score</i>
 									<br>
-									<b>CORnet-S:</b> 
+									<b>CORnet-S:</b> There are three main criterai CORnet-S is based on to match the brain.
+									<ol>
+										<li><b>Predictivity:</b> Requires the correct outputs, but also matches the internal mechanisms. ANN's seem to be our current go to.</li>
+										<li><b>Compactness:</b> More compact models are easier to experiment with. On top of that the brain's visual system is fairly limited 
+										in length, therefore the authros define compactness as depth of the network (number of layers)</li>
+										<li><b>Recurrence:</b> Recent studies have shown recurrent connections within the brain</li>
+									</ol>
+									The main idea behind CORnet-S is to implement recurrence through inspiration of ResNets, which one can think of as an unrolled RNN.
+									The next step was to create four distinct layers, each analagous to the ventral visual system areas, with a final linear decoding layer.
+									The paper then goes on to describe how they implemented the model with specifics on the size of the convolutions, the max poolings, the stride, and how they
+									implemented recurrence.
+									<br>
+									From what I have read, it doesn't seem like there was much rhyme nor reason to their specificities in constructing the architecture. At least non that 
+									I could tell from reading the paper. From what I read, it seemed like they kept messing around with the architecture to attain better and better scores 
+									on the Brain-Score metric. Perhaps the reason for this is that beneath the high level structure of the ventral system, we really don't know much about 
+									what goes on underneath the hood in terms of neural connections. 
+									<br>
+									Comparing this to other models, the author's argue that they went one step further than current models and built a maximally compact model that would perform
+									better than other recurrent networks on ImageNet 
+									<br>
+									<b>Brain-Score:</b> Similarly, there are three metrics that Brain-Score uses to compare engineered models to the brain.
+									<ol>
+										The model has to predict:
+										<li>Mean neural responses of each neural recording site to every tested naturalistic site in the V4 and IT.</li>
+										<li>Mean pooled human choice when reporting a target object to each naturalistic image.</li>
+										<li>When object category is resolved in non-human primate area IT.</li>
+									</ol>
+									The model is then ranked on the mean behavorial score, the V4 neural score, the IT neural score, and neural dynamics score.
+									<br>
+
 								</p>
 								<br>
 
 								<!-- Results -->
 								<p>
-									<h4>Results:</h4>
+									<h3>Results:</h3> Unsurprsingly, CORnet-S is the best brain predicion model to date. Is it because they were the first to actually try to do this with the metric (Brain-Score) that 
+									they themselves created? Possibly. But it is an impressive feat nonetheless and the Brain-Score metric will provide more utility as more researchers attempt to 
+									perform well in correspondance with it. Their results also show that top performance on ImageNet does not correlate with scoring well on brain likeliness. The authors finally 
+									acknowledge that their model could be more "brain-like", however this is simply the beginning and they wanted to create the discussion.
 								</p>
 							</section>
 
