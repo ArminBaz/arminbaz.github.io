@@ -46,7 +46,6 @@
 									<h3>Paper Read Through: "Deep Residual Learning for Image Recognition"<br />
 									</h3>
                                 </header>
-                                TODO: Change photo
 								<div class="image main"><img src="../../images/yosemite_valley.jpeg" alt="" /></div>
 								<p><h4>Link to the <a href="https://arxiv.org/pdf/1512.03385.pdf">
 									<em><u>paper</u></em>.</a>
@@ -69,7 +68,7 @@
                                 <p>
                                     <h3>Methods:</h3> The idea is a relatively simple one. They implement "blocks" of with a variable number of operations within each block. They call these
                                     blocks <it>residual blocks</it> where each one is focused on learning some residual mapping of the entire underlying mapping to be learned.
-                                    if $x$ is the input, then $y=F(x,{W_i})+x$, where the function $F(x,{W_i})$ represents the residual mapping to be learned. Note that if the input and output channel
+                                    If $x$ is the input, then \(y = F(x,{W_i}) + x\) $y=F(x,{W_i})+x$, where the function $F(x,{W_i})$ represents the residual mapping to be learned. Note that if the input and output channel
                                     dimensions are not the same we can instead do $y=F(x,{W_i})+W_sx$ where $W_s$ is a linear projection to match the dimensions. Note that the inclusion of $W_s$ also
                                     introduces another trainable parameter.
                                     <br>
