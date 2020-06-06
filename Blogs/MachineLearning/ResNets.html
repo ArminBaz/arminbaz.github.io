@@ -68,8 +68,8 @@
                                 <p>
                                     <h3>Methods:</h3> The idea is a relatively simple one. They implement "blocks" of with a variable number of operations within each block. They call these
                                     blocks <it>residual blocks</it> where each one is focused on learning some residual mapping of the entire underlying mapping to be learned.
-                                    If (x\) is the input, then \(y = F(x,{W_i}) + x\), where the function (F(x,{W_i})\) represents the residual mapping to be learned. Note that if the input and output channel
-                                    dimensions are not the same we can instead do (y = F(x,{W_i}) + {W_s}x\) where (W_s\) is a linear projection to match the dimensions. Note that the inclusion of (W_s\) also
+                                    If \(x\) is the input, then \(y = F(x,{W_i}) + x\), where the function (F(x,{W_i})\) represents the residual mapping to be learned. Note that if the input and output channel
+                                    dimensions are not the same we can instead do \(y = F(x,{W_i}) + {W_s}x\) where \(W_s\) is a linear projection to match the dimensions. Note that the inclusion of \(W_s\) also
                                     introduces another trainable parameter.
                                     <br>
                                     The authors note that there are three different approaches when the input and output dimensions don't match for the shortcuts:
