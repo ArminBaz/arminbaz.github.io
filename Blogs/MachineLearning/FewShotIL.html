@@ -66,22 +66,26 @@
                                     domain-specific language (DSL). They propose that by logically combining these feature detectors, they are able to derive an infinitely large, rich, policy class from a
                                     small DSL.
 									<br>
-                                    <b>LPP</b> This is the real meat of the paper. Before we get into this, it is useful to build some foundation. The policies are parameterized by a state action classifier \(h : SxA \rightarrow {0,1}\).
+                                    <b>LPP:</b> This is the real meat of the paper. Before we get into this, it is useful to build some foundation. The policies are parameterized by a state action classifier \(h : SxA \rightarrow {0,1}\).
                                     When \(h(s,a)=0\) action \(a\) will never be taken in state \(s\), whereas if it is 1, then action \(a\) <i>might</i> be taken. This paramaterization allows for the handling
-                                    of arbitrarily large action spaces. Given \(h(s,a)\) we can derive a corresponding policy \{\pi}(a|s)\). Now, how should we define our function \(H\) from which to learn \(h\)?
+                                    of arbitrarily large action spaces. Given \(h(s,a)\) we can derive a corresponding policy \({\pi}(a|s)\). Now, how should we define our function \(H\) from which to learn \(h\)?
+                                    <br>
                                     <br>
                                     One method is to use <i>logical</i> rules where we combine features derived from \((s,a)\) with Boolean logic. This is fast, but it requires the programmer to hand engineer features for every task.
                                     Another method is to consider <i>programmatic</i> rules that are expressions in some DSL. This is extremely slow and requires a vast DSL. The compromise, according to the authors is in LPP. 
                                     They have a logical "top level" and a programmatic "bottom level." The bottom level is comprised of the feature detectors I talked about before (takes a state action pair as input and returns a binary output), 
                                     and the top level is a logical formula \(h\) where the inputs are the outputs of the bottom level.
                                     <br>
+                                    <br>
                                     The paper also suggests that rather than finding a single LPP policy, they will take advantage of Bayesian learning, and instead infer a full posterior distribution over policies \(p({\pi} | D)\).
                                     Once the posterior is inferred, the agent will simply take MAP actions.
                                     <br>
+                                    <br>
                                     The paper defines prior probabilites \(p(f)\) specified by a probabilistic context-free grammar (PCFG) which they define. The algorithm then works by taking a set of observations \(D\), where each state action pair 
-                                    \((s,a)\) is an example. First, they obtain false observations \(\overline{D}\) which serve as approximate negative examples. Now, this is a binary classfication problem. Next, the feature sets for both \(D\) and \(/overline{D}\) are obtained 
+                                    \((s,a)\) is an example. First, they obtain false observations \(\overline{D}\) which serve as approximate negative examples. Now, this is a binary classfication problem. Next, the feature sets for both \(D\) and \(\overline{D}\) are obtained 
                                     from the PCFG using a BFS search through the grammar to obtain the highest probability features. Next, given the feature vectors \(f_1,...,f_i\) they convert all of the state-action pairs \((s,a)\)
                                     into length-\(i\) binary feature vectors \(x\).
+                                    <br>
                                     <br>
                                     Each iteration \(i\) has \(f_1,...,f_i\) features and iteratively decision-trees are learnt with this incremental feature size. Finally the top \(K\) decision-trees are used as a weighted 
                                     mixture model for testing.
