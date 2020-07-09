@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Too Many Cooks</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+		<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+		<script>
+			MathJax.Hub.Config({
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+			});
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../../index.html" class="logo">BigBadBaz</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="DL.html">FewShotIL</a></li>
+							<li><a href="../../index.html">Home</a></li>
+							<li><a href="../../generic.html">About Me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/armin.bazarjani" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/arminbazza/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/ArminBaz" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>Paper Read Through: Too many cooks: Bayesian inference for coordinating multi-agent collaboration<br />
+									</h3>
+								</header>
+								<div class="image main"><img src="../../images/klegs1.jpg" alt="" /></div>
+								<p><h4>Link to the <a href="https://arxiv.org/pdf/2003.11778.pdf">
+									<em><u>paper</u></em>.</a>
+									</h4></p>
+								<!-- Context -->
+								<p>
+                                    <h3>Context:</h3> An accepted paper from MIT to Autonomous Agents and MultiAgent Systems (AAMAS) 2020.
+								</p>
+                                <br>
+                                <p>
+                                    <h3>Motivation:</h3> Humans possess a capability called the "theory-of-mind", the ability to infer hidden mental states that drive others to act.
+                                    The authors of this paper are interested by this and how it allows us to collaborate without explicitly telling one another what to do.
+                                </p>
+
+								<!-- Methods -->
+								<p>
+                                    <h3>Method:</h3> The authors propose <i>Bayesian Delegation</i> which allows agent's to infer the "hidden" intentions of others through inverse planning. <br>
+                                    <br>
+                                    Their model works as such: There is a "high-level" where each agent decides what sub-task to complete next, this is done through Bayesian delegation. At the "low-level" agents
+                                    used model based reinforcement learning to find optimal policies for a specific sub-task.<br>
+                                    <br>
+                                    <h4>High-Level:</h4> Bayesian delegation works by having each agent maintain and update a belief state over the possible sub-tasks that all agents (including itself) are working on. Essentially, what is happening
+                                    is that each agent must decide which subtask to work on through Bayesian estimation \(ta^* = \argmax_ta{P(ta | H_{0:T})}\) where \(ta\) is the subtask and \(H_{0:T}\) is the history of actions. Note that the history of actions is the same for all agents and
+                                    during this process each agent /(i/) is uncertain about which /(ta/) other's are working on, hence /(P(ta)/). <br>
+                                    <br>
+                                    Note: if there are two tasks /(T_1 and T_2/) and two agents /(a_1 and a_2/) then there are 4 sub-tasks.
+                                    Where /(ta = [(a_1 : T_1, a_2 : T_1), (a_1 : T_1, a_2 : T_2), (a_1 : T_2, a_2 : T_2), (a_1 : T_2, a_2 : T_1)]/) the sub-tasks allow for the possibility to divide and conquer or to cooperate. 
+                                    Because each agent must choose which subtask is the most probable (given the history of actions) they are dynamically choosing to cooperate and/or conquer the entire time. <br>
+                                    <br>
+                                    <h4>Low-Level:</h4> Low level planning grounds the sub-tasks that each agent is working on. What does this mean? The low-level planner takes the /(ta/), or sub-task, selected by Bayesian delegation in the high-level planner, and
+                                    generates a sequence of actions for the agent to execute while also modeling the movements of the other agents across space and time. In this paper, the authors decided to use bounded real-time dynamic programming
+                                    and extend it to a multi-agent setting.
+								</p>
+								<br>
+
+								<!-- Results -->
+								<p>
+                                    <h3>Results:</h3> The experiments in this paper were pretty interesting. Instead of testing their model out against others, the authors proposed "lesioned" models. Lesioned here meaning that one or two parts of the model are missing.
+                                    I assume they use lesioned here because they want to send home the analogy that this is brain inspired in some sense. The two lesioned models are one with no joint planning (NJP) and another
+                                    with no joing planning and no Bayesian delegation (NJP+NBD). The first one is where there is no cooperation and the second is assuming lack of "social intelligence." <br>
+                                    <br>
+                                    The experimental results were conclusive in showing that both joint planning and Bayesian delegation are important pieces of this model.
+/								</p>
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; ArminBaz</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
