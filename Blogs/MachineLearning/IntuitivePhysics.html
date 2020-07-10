@@ -43,41 +43,47 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<h3>Paper Read Through: Too many cooks: Bayesian inference for coordinating multi-agent collaboration<br />
+									<h3>Paper Read Through: Modeling Expectation Violation in Intuitive Physics with Coarse Probabilistic Object Representations<br />
 									</h3>
 								</header>
 								<div class="image main"><img src="../../images/klegs1.jpg" alt="" /></div>
-								<p><h4>Link to the <a href="https://arxiv.org/pdf/2003.11778.pdf">
+								<p><h4>Link to the <a href="http://www.mit.edu/~k2smith/pdf/Smith_et_al-2019-Modeling_Expectation_Violation.pdf">
 									<em><u>paper</u></em>.</a>
 									</h4></p>
 								<!-- Context -->
 								<p>
-                                    <h3>Context:</h3> An accepted paper from MIT to Autonomous Agents and MultiAgent Systems (AAMAS) 2020.
+                                    <h3>Context:</h3> An accepted paper to NIPS 2019 from a joint collaboration between MIT, Harvard, and Princeton.
 								</p>
                                 <br>
                                 <p>
-                                    <h3>Motivation:</h3> Humans possess a capability called the "theory-of-mind", the ability to infer hidden mental states that drive others to act.
-                                    The authors of this paper are interested by this and how it allows us to collaborate without explicitly telling one another what to do.
+                                    <h3>Motivation:</h3> As humans, we have some intuitive idea of physics that allows us to manipulate and interact with our environment. We know that objects wont simply vanish out of existence, or a desk won't morph and contort 
+                                    in a strange way that, perhaps rubber would. A theory about this is that this is a "core knowledge" that we either develop early on, or that is innate in us. The authors attempt to model this human-like physical understanding operating
+                                    under the mantra that "Intelligent machines that can interact with the physical world in a human-like way should hold human-like physical intuitions."
                                 </p>
 
 								<!-- Methods -->
 								<p>
-                                    <h3>Method:</h3> The authors propose <i>Bayesian Delegation</i> which allows agent's to infer the "hidden" intentions of others through inverse planning. <br>
+                                    <h3>Method:</h3> The authors propose <i>ADEPT</i> They describe it as "closing the loop" between cognitive models of intuitive physics and computer vision models.
+                                    The model works in three ways.
+                                    <ul>
+                                        <li><b>i.</b> It learns to parse novel arbitrarily shaped objects into approximate geometric forms.</li>
+                                        <li><b>ii.</b> Makes extended predictions about future world states, through the combination of a standard physics engine with the possibility of resampling aspects of the dynamic scene from the prior</li>
+                                        <li><b>iii.</b> Uses a particle filter to tie together parsing and predicting, allowing it to track objects over a blockage.</li>
+                                    </ul>
                                     <br>
-                                    Their model works as such: There is a "high-level" where each agent decides what sub-task to complete next, this is done through Bayesian delegation. At the "low-level" agents
-                                    used model based reinforcement learning to find optimal policies for a specific sub-task.<br>
                                     <br>
-                                    <h4>High-Level:</h4> Bayesian delegation works by having each agent maintain and update a belief state over the possible sub-tasks that all agents (including itself) are working on. Essentially, what is happening
-                                    is that each agent must decide which subtask to work on through Bayesian estimation \(ta^* = argmax_{ta}{P(ta | H_{0:T})}\) where \(ta\) is the subtask and \(H_{0:T}\) is the history of actions. Note that the history of actions is the same for all agents and
-                                    during this process each agent \(i\) is uncertain about which \(ta\) other's are working on, hence \(P(ta)\). <br>
+                                    The ADEPT model itself contains two different parts. During each timestep, the scene goes through part A first, then part B. Then, on each sequential timestep the previous output from Part B at \(t-1\) is fed into Part B at \(t\)
+                                    <ul>
+                                        <li><b>Part A:</b> The perception module segments the image and extracts coarse object attributes. This is done through the use of graph neural networks.</li>
+                                        <li><b>Part B:</b> The reasoning module tracks and updates beliefs on the perception results. This is where the particle filter algorithm and extended stoachistic physics engine come to party.</li>
+                                    </ul>
                                     <br>
-                                    Note: if there are two tasks \(T_1 and T_2\) and two agents \(a_1 and a_2\) then there are 4 sub-tasks.
-                                    Where \(ta = [(a_1 : T_1, a_2 : T_1), (a_1 : T_1, a_2 : T_2), (a_1 : T_2, a_2 : T_2), (a_1 : T_2, a_2 : T_1)]\) the sub-tasks allow for the possibility to divide and conquer or to cooperate. 
-                                    Because each agent must choose which subtask is the most probable (given the history of actions) they are dynamically choosing to cooperate and/or conquer the entire time. <br>
                                     <br>
-                                    <h4>Low-Level:</h4> Low level planning grounds the sub-tasks that each agent is working on. What does this mean? The low-level planner takes the \(ta\), or sub-task, selected by Bayesian delegation in the high-level planner, and
-                                    generates a sequence of actions for the agent to execute while also modeling the movements of the other agents across space and time. In this paper, the authors decided to use bounded real-time dynamic programming
-                                    and extend it to a multi-agent setting.
+                                    <i>Perception</i> (Part A) is done in two parts. First, the input image is fed into instance segmentation network to obtain object segments {the model only knows two, large thin cuboids (occluder) and an ellipsoids of varied scale for other objects}. 
+                                    The segmented objects are then fed into a deep convolutional feature extractor which returns a feature vector that encodes intrinsic attributes (type, scale) and state attributes (location, velocity, rotation).
+                                    <br>
+                                    <br>
+                                    <i>Reasoning</i> (Part B) 
 								</p>
 								<br>
 
