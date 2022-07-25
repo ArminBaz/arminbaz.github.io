@@ -2707,7 +2707,7 @@ input, select, textarea {
 		color: #d2f2e9;
 		*/
 		background: #9370DB;
-		color: #b49de1;
+		color: #deceff;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2726,8 +2726,7 @@ input, select, textarea {
 			}
 
 		#header header p {
-			/*color: #b7eadc;*/
-			color: #b49de1;
+			color: #deceff;
 		}
 
 		#header a {
@@ -2759,7 +2758,7 @@ input, select, textarea {
 
 			#header > header p {
 				/* Armin addition*/
-				color: #b49de1;
+				color: #deceff;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2781,7 +2780,7 @@ input, select, textarea {
 
 				#header > footer .icons li a {
 					/* Armin addition*/
-					color: #b49de1;
+					color: #deceff;
 				}
 
 		#header > nav {
@@ -2799,7 +2798,7 @@ input, select, textarea {
 
 				/* Armin addition*/
 				#header > nav ul li {
-					border-top: solid 2px #b49de1;
+					border-top: solid 2px #deceff;
 					display: block;
 					padding: 0;
 				}
