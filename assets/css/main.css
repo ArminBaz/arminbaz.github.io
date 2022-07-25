@@ -2725,7 +2725,8 @@ input, select, textarea {
 			}
 
 		#header header p {
-			color: #b7eadc;
+			/*color: #b7eadc;*/
+			color: #9370DB;
 		}
 
 		#header a {
