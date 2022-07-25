@@ -2701,7 +2701,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background: #9370DB;
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
@@ -2789,6 +2789,7 @@ input, select, textarea {
 				padding: 0;
 			}
 
+				/* Armin addition*/
 				#header > nav ul li {
 					border-top: solid 2px #9370DB;
 					display: block;
