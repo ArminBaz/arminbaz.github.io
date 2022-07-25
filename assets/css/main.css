@@ -1783,9 +1783,9 @@ input, select, textarea {
 		margin-top: -0.25em;
 		line-height: 1.5em;
 	}
-
+/* Armin Addition */
 	header.major h2 {
-		color: #4acaa8;
+		color: #9370DB;
 		font-size: 3.5em;
 	}
 
