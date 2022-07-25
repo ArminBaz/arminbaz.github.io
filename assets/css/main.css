@@ -2620,7 +2620,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #4acaa8;
+			background-color: #9370DB;
 			color: #ffffff !important;
 		}
 
@@ -2706,8 +2706,8 @@ input, select, textarea {
 		background: #4acaa8;
 		color: #d2f2e9;
 		*/
-		background: #4acaa8;
-		color: #9370DB;
+		background: #9370DB;
+		color: #b49de1;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2727,7 +2727,7 @@ input, select, textarea {
 
 		#header header p {
 			/*color: #b7eadc;*/
-			color: #9370DB;
+			color: #b49de1;
 		}
 
 		#header a {
@@ -2779,7 +2779,7 @@ input, select, textarea {
 			}
 
 				#header > footer .icons li a {
-					color: #b7eadc;
+					color: #b49de1;
 				}
 
 		#header > nav {
@@ -2797,7 +2797,7 @@ input, select, textarea {
 
 				/* Armin addition*/
 				#header > nav ul li {
-					border-top: solid 2px #9370DB;
+					border-top: solid 2px #b49de1;
 					display: block;
 					padding: 0;
 				}
@@ -2816,7 +2816,7 @@ input, select, textarea {
 
 						#header > nav ul li a.active {
 							background: #fff;
-							color: #4acaa8 !important;
+							color: #9e8cc0 !important;
 						}
 
 					#header > nav ul li:first-child {
