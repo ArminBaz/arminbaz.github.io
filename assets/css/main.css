@@ -2758,7 +2758,8 @@ input, select, textarea {
 			}
 
 			#header > header p {
-				color: #d2f2e9;
+				/* Armin addition*/
+				color: #b49de1;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2779,6 +2780,7 @@ input, select, textarea {
 			}
 
 				#header > footer .icons li a {
+					/* Armin addition*/
 					color: #b49de1;
 				}
 
@@ -2816,6 +2818,7 @@ input, select, textarea {
 
 						#header > nav ul li a.active {
 							background: #fff;
+							/* Armin addition*/
 							color: #9e8cc0 !important;
 						}
 
@@ -3084,9 +3087,6 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						/*
-						background: #4acaa8;
-						*/
 						background: #9370db;
 						color: #ffffff;
 						content: '\f0c9';
