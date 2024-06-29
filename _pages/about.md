@@ -2,7 +2,7 @@
 permalink: /
 title: "About me"
 header:
-  image: 
+  image: Yosemite_1.jpg
   caption: Yosemite California
 author_profile: true
 redirect_from: 
