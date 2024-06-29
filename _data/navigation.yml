@@ -2,9 +2,9 @@
 main:
   - title: "Publications"
     url: /publications/
-    
+
   - title: "CV"
-    url: /cv/
+    url: "/files/ArminBaz_CV.pdf"
 
   # - title: "Talks"
   #   url: /talks/    
