@@ -21,7 +21,7 @@ repository               : "arminbaz/arminbaz.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/Headshot.JPEG"
+  avatar           : "profile.png"
   name             : "Your Sidebar Name"
   pronouns         : # example: "she/her"  
   bio              : "Trying to become a neuroscientist"
