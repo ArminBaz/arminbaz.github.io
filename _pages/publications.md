@@ -4,13 +4,10 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
+### 2023
+___
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+**Uncovering the Missing Pattern: Unified Framework Towards Trajectory Imputation and Prediction**  
+*Yi Xu, Armin Bazarjani, Hyung-gun Chi, Chiho Choi, Yun Fu*  
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023   
+[arXiv](https://arxiv.org/abs/2303.16005)
