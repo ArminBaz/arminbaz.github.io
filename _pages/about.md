@@ -1,9 +1,6 @@
 ---
 permalink: /
 title: "Welcome!"
-# header:
-#   image: "../images/Yosemite_1.jpg"
-#   caption: Yosemite California
 author_profile: true
 redirect_from: 
   - /about/
@@ -13,7 +10,9 @@ redirect_from:
 ## About me
 I'm a PhD student working with [Payam Piray](https://www.piraylab.com/) at the University of Southern California. My research focuses on how the brain constructs flexible and general representations of the world, this is what I believe to be the key to our intelligence. 
 
-Currently, I am interested in the principles behind how the brain constructs a "cogntive map" through the combination of place cells in the hippocampus and grid cells in the entorhinal cortex.
+Currently, I am interested in the principles behind how the brain constructs a "cogntive map" through the combination of place cells in the hippocampus and grid cells in the entorhinal cortex. I am approaching this problem combining ideas from control theory, Bayesian statistics, and theoretical neuroscience.
+
+At some point, I'm hoping to be able to apply this work back to the fields of artficial intelligence and deep learning hopefully developing models that are able to learn more useful and general representations of the world. Perhaps, this is the way around the (information bottlenck)[https://arxiv.org/abs/1503.02406]?
 
 ### A more personal note
 On a more personal side, my interests include various outdoor activities like hiking, running, skateboarding, and backpacking. I also enjoy coffee (typical LA coffee snob) and reading. Basically, when I'm not doing research, spending time with my dog, or getting caffeinated, I try to be outdoors.
