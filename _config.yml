@@ -22,11 +22,11 @@ repository               : "arminbaz/arminbaz.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Armin Baz"
   pronouns         : # example: "she/her"  
   bio              : "Trying to become a neuroscientist"
   location         : "Los Angeles, CA"
-  employer         : "University of Southern California"
+  employer         : # "University of Southern California"
   uri              : # URL
   email            : "bazarjan@usc.edu" 
 
