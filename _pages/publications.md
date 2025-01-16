@@ -8,7 +8,7 @@ author_profile: true
 ___
 
 **Efficient Learning of Predictive Maps for Flexible Planning**  
-* **Armin Bazarjani**, Payam Piray*  
+*__Armin Bazarjani__, Payam Piray*  
 PsyArXiv, 2025   
 [link](https://osf.io/preprints/psyarxiv/ak57f)
 
