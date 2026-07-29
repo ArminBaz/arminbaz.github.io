@@ -10,6 +10,7 @@ redirect_from:
 ## About me
 I'm a PhD student working with [Payam Piray](https://www.piraylab.com/) at the University of Southern California (USC). My research focuses on how the brain constructs flexible and general representations of the world. I also obtained both my bachelors and masters degrees from USC, but in electrical engineering. Before starting my PhD, I worked as a research engineer at [Honda Research Institute](https://usa.honda-ri.com) working on problems related to representational learning for self-driving cars.
 
+### Research interests
 Currently, I am investigating the principles behind the brain's construction of a "cognitive map," particularly the interplay between various specialized cell types in the hippocampal-entorhinal system. This includes place cells in the hippocampus, as well as grid cells, object-vector cells, and border cells in the entorhinal cortex. I aim to understand how these neural components work together to create--or potentially emerge from--a cognitive map that represents not only spatial information but also object relationships and environmental boundaries. I approach this problem by combining ideas from reinforcement learning, control theory, Bayesian probability theory, and theoretical neuroscience.
 
 I also aim to apply this work back to the fields of artificial intelligence and deep learning, developing models that are able to learn more flexible representations of the world that can be continuously updated.
