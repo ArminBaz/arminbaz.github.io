@@ -1,0 +1,10 @@
+# Colored badges shown next to each publication, keyed by the `abbr` field in
+# _bibliography/papers.bib. An abbr with no entry here still renders, just grey.
+
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  color: "#7c3aed"
+
+"bioRxiv":
+  url: https://www.biorxiv.org/
+  color: "#c2410c"

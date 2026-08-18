@@ -1,0 +1,86 @@
+name: Deploy site
+
+# Builds the site and hands the finished HTML straight to GitHub Pages.
+#
+# Everything lives on one branch: this repo holds only source, and the built
+# output is never committed anywhere — it's uploaded as a Pages artifact.
+#
+# GitHub Pages can't build this site itself (al-folio needs jekyll-scholar and
+# friends, which aren't on the Pages plugin allowlist), so the build runs here
+# with a full unrestricted `bundle exec jekyll build`.
+#
+# One-time setup: Settings → Pages → Source: "GitHub Actions".
+# (Not "Deploy from a branch" — that mode is what needs a gh-pages branch.)
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time. Don't cancel a run that's mid-publish.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true # bundle install + gem caching
+
+      - name: Setup Node 🧰
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install JS deps 📦
+        run: npm ci
+
+      - name: Setup Pages ⚙️
+        uses: actions/configure-pages@v5
+
+      - name: Build 🔧
+        # No --baseurl flag here on purpose: this is a user site served at the
+        # domain root, and _config.yml already sets `baseurl:` empty. Letting the
+        # action inject a base path would double-prefix every URL.
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Purge unused CSS 🧹
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+
+      - name: Upload artifact 📤
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v5

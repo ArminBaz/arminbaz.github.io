@@ -1,0 +1,181 @@
+# Structured CV, rendered at /cv/ by the al_folio_cv plugin (RenderCV format).
+# Transcribed from assets/pdf/ArminBazarjani_CV.pdf — keep the two in sync when
+# you update either one.
+#
+# Section names are meaningful: Education, Experience, Publications, Skills,
+# Awards, Languages, Interests, Certificates, Projects and References each get
+# a purpose-built renderer. Any other name falls back to a simple list, which
+# accepts entries shaped either `{bullet: ...}` or `{label: ..., details: ...}`.
+#
+# Experience entries are sorted by date automatically, newest first, with
+# ongoing roles at the top — so the order below doesn't matter.
+
+cv:
+  name: Armin Bazarjani
+  label: PhD Student, Computational and Cognitive Neuroscience
+  email: bazarjan@usc.edu
+  website: https://arminbazza.github.io
+  # Phone number deliberately left off the public site; it stays in the PDF.
+  address:
+    city: Los Angeles
+    region: California
+    countryCode: US
+  summary: >
+    PhD student at USC working with Payam Piray on how the brain builds flexible,
+    general representations of the world, combining reinforcement learning,
+    control theory, Bayesian probability and theoretical neuroscience. Previously
+    a research engineer at Honda Research Institute working on representation
+    learning for self-driving cars.
+
+  sections:
+    Education:
+      - institution: University of Southern California
+        location: Los Angeles, CA
+        url: https://www.usc.edu/
+        studyType: PhD, Computational and Cognitive Neuroscience
+        start_date: "2023"
+        end_date: "2028"
+        highlights:
+          - Expected 2028.
+
+      - institution: University of Southern California
+        location: Los Angeles, CA
+        studyType: MS, Electrical Engineering
+        start_date: "2020"
+        end_date: "2021"
+        highlights:
+          - 3.8 GPA.
+
+      - institution: University of Southern California
+        location: Los Angeles, CA
+        studyType: BS, Electrical Engineering
+        start_date: "2016"
+        end_date: "2020"
+
+    Experience:
+      - company: University of Southern California
+        position: Graduate Researcher
+        location: Los Angeles, CA
+        start_date: "2023-06"
+        summary: "Supervisor: Dr. Payam Piray"
+        highlights:
+          - Extended a popular predictive-representation-based reinforcement learning model (default representation) with a novel, feature-based approach. The extension allows the key element of compositionality to be maintained in a fully feature-based definition, and we mathematically proved convergence (NeurIPS, under review).
+          - Extended reinforcement learning models for brain decision-making, achieving efficient online learning with policy-independent environmental representations for task transfer. This provides a normative and unified explanation for seemingly disparate behavioral differences in human decision-making tasks (Nature Communications, under review).
+          - Implemented an episodic memory buffer into a popular RL world model (DreamerV3) and showed that a simple episodic memory component helps in environments that require long-term memory.
+          - Experimented with different types of deep RL models (model-based and model-free) as encoding models for the brain, comparing the predictive accuracy of each to see whether there was a distinction in the brain.
+
+      - company: Honda Research Institute
+        position: Research Engineer
+        location: San Jose, CA
+        url: https://usa.honda-ri.com
+        start_date: "2021-12"
+        end_date: "2023-03"
+        summary: "Supervisor: Dr. Behzad Dariush"
+        highlights:
+          - Developed a unified framework for the joint problem of trajectory prediction and imputation — the pioneering work that identified and filled the gap in benchmarks and techniques for this joint problem (CVPR 2023).
+          - Developed predictive models for road scene classification and segmentation into an orthographic bird's-eye view (BEV) frame. Explored temporal architectures to handle long- and short-term context and address occlusions.
+          - Assisted in deploying a real-time trajectory prediction model onto a vehicle, including model fine-tuning with real-world data, optimizing pre- and post-processing for efficiency, and adapting the inference pipeline for hardware constraints.
+
+      - company: Center for Artificial Intelligence in Society (CAIS), USC
+        position: Undergraduate Researcher
+        location: Los Angeles, CA
+        start_date: "2021-02"
+        end_date: "2021-06"
+        summary: "Supervisor: Dr. Bistra Dilkina"
+        highlights:
+          - Assisted in implementing and testing an unsupervised clustering and classification network parameterized by a Gaussian mixture model for camera-trap images. Tested the approach against state-of-the-art clustering benchmarks such as DEC and DeepCluster.
+
+      - company: Neuro Imaging With Deep Learning Lab (NIDL), USC
+        position: Undergraduate Researcher
+        location: Los Angeles, CA
+        start_date: "2019-09"
+        end_date: "2020-07"
+        summary: "Supervisor: Dr. Hosung Kim"
+        highlights:
+          - Artificially aged brains on fMRI images using GANs to identify neurodegeneration. Improved U-Net and Capsule Net segmentation by adding multi-scale highlighted foregrounds for white matter hyperintensities.
+          - Established a standardized image processing pipeline for MRI images using a shell script with FSL commands.
+
+      - company: Autonomous Networks Research Group (ANRG), USC
+        position: Undergraduate Researcher
+        location: Los Angeles, CA
+        start_date: "2019-06"
+        end_date: "2019-08"
+        summary: "Supervisor: Dr. Bhaskar Krishnamachari"
+        highlights:
+          - Proposed and implemented a novel ML solution to estimate vehicular communication ranges in dynamic systems.
+
+      - company: Qualcomm
+        position: Software Engineering Intern
+        location: San Diego, CA
+        start_date: "2018-06"
+        end_date: "2018-08"
+        summary: "Supervisor: Dr. Suhail Jalil"
+        highlights:
+          - Created a C-sim for facial recognition hardware and converted existing code into C++. Produced a parsing script to optimize product testing for current and future engineers.
+
+      - company: Qualcomm
+        position: Software Engineering Intern
+        location: San Diego, CA
+        start_date: "2017-06"
+        end_date: "2017-08"
+        summary: "Supervisor: Dr. Suhail Jalil"
+        highlights:
+          - Used machine learning on capacitive signals from touch screens to identify whether a user was an adult or a child. The project was accepted to the Qualcomm Machine Learning Summit for Fall 2017.
+
+    Publications:
+      - title: "Default Feature Representations of the Cognitive Map"
+        publisher: Armin Bazarjani, Payam Piray — under review at NeurIPS 2026
+        date: "2026"
+        url: https://www.biorxiv.org/content/biorxiv/early/2026/05/14/2026.05.11.724436.full.pdf
+
+      - title: "Efficient Learning of Predictive Maps for Flexible Planning"
+        publisher: Armin Bazarjani, Payam Piray — under review at Nature Communications
+        date: "2025"
+        url: https://www.biorxiv.org/content/biorxiv/early/2026/06/22/2026.02.11.705395.full.pdf
+
+      - title: "Uncovering the Missing Pattern: Unified Framework Towards Trajectory Imputation and Prediction"
+        publisher: Yi Xu, Armin Bazarjani, Hyung-gun Chi, Chiho Choi, Yun Fu — Conference on Computer Vision and Pattern Recognition (CVPR)
+        date: "2023"
+        url: https://arxiv.org/abs/2303.16005
+
+    Patents:
+      - bullet: >
+          Yi Xu, **Armin Bazarjani**, Hyung-gun Chi, Chiho Choi, Yun Fu.
+          "Trajectory imputation and prediction."
+          [Google Patents, US20240160812A1](https://patents.google.com/patent/US20240160812A1/en)
+
+    Reviewing:
+      - label: Journals
+        details: Nature Communications
+      - label: Conferences
+        details: CVPR
+
+    Skills:
+      - name: Languages
+        keywords:
+          - Python
+          - C/C++
+          - JavaScript
+          - HTML/CSS
+          - Matlab
+      - name: Frameworks
+        keywords:
+          - PyTorch
+          - TensorFlow
+          - Keras
+      - name: Developer Tools
+        keywords:
+          - Git
+          - Docker
+          - VS Code
+          - Visual Studio
+          - PyCharm
+      - name: Libraries
+        keywords:
+          - Pandas
+          - NumPy
+          - Matplotlib
+          - Gymnasium
+          - Scikit-Learn
+          - OpenCV
+          - JAX

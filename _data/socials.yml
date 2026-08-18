@@ -1,0 +1,16 @@
+# Social icons shown at the bottom of the homepage.
+# Icons appear in the order listed here. Delete a line to drop that icon.
+# Full list of supported keys: https://github.com/george-gca/jekyll-socials
+
+email: bazarjan@usc.edu
+scholar_userid: CvlkhhwAAAAJ
+github_username: arminbazza
+linkedin_username: armin-bazarjani
+x_username: arminbazza
+cv_pdf: /assets/pdf/ArminBazarjani_CV.pdf
+
+# Uncomment once you start posting and want to advertise the blog's RSS feed.
+# rss_icon: true
+
+# Add if you have one — it's the single most useful ID for an academic profile:
+# orcid_id: 0000-0000-0000-0000
