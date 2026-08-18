@@ -17,7 +17,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: neuroscience, cognitive map, reinforcement learning, hippocampus, predictive representations
 lang: en
-icon: 🧠 # emoji favicon, or the filename of an image in /assets/img/
+icon: 🧐 # emoji favicon, or the filename of an image in /assets/img/
 
 url: https://arminbazza.github.io # base hostname & protocol
 baseurl: # leave blank for a user site served at the domain root
