@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: CV
 nav: true
 nav_order: 2
 cv_pdf: /assets/pdf/ArminBazarjani_CV.pdf # the PDF download icon next to the page title

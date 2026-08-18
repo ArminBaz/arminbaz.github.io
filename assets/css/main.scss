@@ -1,7 +1,16 @@
 ---
-# the empty front matter is required — it tells Jekyll to process this file
+# The empty front matter is required — it tells Jekyll to process this file.
 ---
 @charset "utf-8";
+
+// ---------------------------------------------------------------------------
+// This file shadows al_folio_core's own assets/css/main.scss. The @use block
+// below reopens every theme partial and must stay first — Sass rejects @use
+// after regular CSS. Add your own rules underneath it.
+//
+// Because this shadows a gem file, run `bundle exec al-folio upgrade overrides
+// audit` after a theme upgrade to see whether upstream added a new partial.
+// ---------------------------------------------------------------------------
 
 @use "sass:math";
 @use "sass:string";
@@ -23,11 +32,19 @@
 @use "teachings";
 @use "typograms";
 
-/* ---------- my customisations ---------- */
+// ===========================================================================
+// My customisations
+// ===========================================================================
+
+// --- Accent colour -------------------------------------------------------
+// Drives links, active nav item, buttons, badges and the social-icon hover.
+// The theme's default is #b509ac (it calls this "purple"; it reads as pink).
+// Dark mode is a separate variable — a light violet keeps contrast readable
+// against the near-black background.
 
 :root {
-  --global-theme-color: #8b5cf6;
-  --global-hover-color: #8b5cf6;
+  --global-theme-color: #7c3aed;
+  --global-hover-color: #7c3aed;
 }
 
 html[data-theme="dark"] {
@@ -35,6 +52,42 @@ html[data-theme="dark"] {
   --global-hover-color: #a78bfa;
 }
 
+// --- Social icons on the homepage ----------------------------------------
+// They're font glyphs, so font-size is the only knob. Theme default is 4rem.
+
 .social .contact-icons {
   font-size: 2.4rem;
+}
+
+// --- Publications --------------------------------------------------------
+// _layouts/bib.liquid renders each entry as one flowing citation paragraph.
+// These rules give the entries breathing room and shrink the link buttons so
+// they sit inline with the text rather than reading as a separate button row.
+//
+// The first selector deliberately mirrors the theme's own specificity
+// (.publications ol.bibliography li .links a.btn) — a shorter selector loses
+// to it regardless of source order.
+
+.publications ol.bibliography li {
+  margin-bottom: 1.5rem;
+}
+
+.publications .pub-entry {
+  line-height: 1.6;
+}
+
+.publications ol.bibliography li .links a.btn,
+.pub-inline-links a.btn {
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: var(--global-text-color);
+  border: 1px solid var(--global-text-color);
+
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
 }

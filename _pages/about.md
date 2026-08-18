@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: PhD student, <a href="https://www.piraylab.com/">Piray Lab</a> · University of Southern California
 
@@ -23,7 +23,7 @@ profile:
     Los Angeles, CA<br>
     bazarjan [at] usc.edu
 
-selected_papers: true # lists papers marked `selected={true}` in papers.bib
+selected_papers: false # set true to list papers marked `selected={true}` in papers.bib
 social: true # social icons from _data/socials.yml
 
 # The blog is intentionally not surfaced here. To list recent posts on the
