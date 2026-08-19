@@ -38,12 +38,12 @@ I'm a PhD student working with [Payam Piray](https://www.piraylab.com/) at the U
 
 ## Research interests
 
-My research focuses on how the brain constructs flexible, general representations of the world. I'm particularly interested in planning and spatial navigation, so I'm currently investigating the principles behind the brain's construction of a "cognitive map," or world model. I want to understand how the brain can represent its environment efficiently enough to support flexible navigation, and how that representation gets updated when the environment changes.
+My research covers topics in both neuroscience and artificial intelligence (AI). Broadly, I am interested in how humans are capable of having such rich and dynamic representations of the environment that allow for a myriad of flexible behaviors in an ever changing world. 
 
-A large part of this is the interplay between specialized cell types in the hippocampal-entorhinal system: place cells in the hippocampus, and grid cells, object-vector cells, and border cells in entorhinal cortex. I'm interested in how these components work together to create — or potentially emerge from — a cognitive map that represents not just spatial information but also object relationships and environmental boundaries. I approach the problem by combining ideas from reinforcement learning, control theory, Bayesian probability, and theoretical neuroscience.
+On the neuro side I study how the brain constructs flexible and general representations of the world, investigating the principles behind the brain's construction of a "cognitive map," or world model (a more AI term). I aim to understand how the brain can represent its environment efficiently enough to support flexible navigation and how I am particularly interested in how that representation gets updated when the environment changes.
 
-I also aim to apply this work back to artificial intelligence and deep learning, developing models that learn more flexible representations of the world and can update them continuously.
+On the AI side I attempt to apply this work back to machine learning and deep learning, using inspiration from the brain to develop models that learn more flexible representations of the world that can be updated continuously.
 
 ## Elsewhere
 
-Outside of research my interests are mostly outdoors: hiking, running, skateboarding, and backpacking. I also enjoy coffee (a typical LA coffee snob) and reading. When I'm not doing research, spending time with my dog, or getting caffeinated, I try to be outside.
+Outside of research my interests are mostly outdoors: hiking, running, skateboarding, etc. I also very much enjoy coffee touring (a typical LA coffee snob) and reading. Basically, when I'm not doing research, spending time with my dog, or getting caffeinated, I try to be outside.
