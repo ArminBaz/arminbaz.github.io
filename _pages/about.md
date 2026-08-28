@@ -38,9 +38,9 @@ I'm a PhD student working with [Payam Piray](https://www.piraylab.com/) at the U
 
 ## Research interests
 
-My research covers topics in both neuroscience and artificial intelligence (AI). Broadly, I am interested in how humans are capable of having such rich and dynamic representations of the environment that allow for a myriad of flexible behaviors in an ever changing world. 
+My research covers topics in both neuroscience and artificial intelligence (AI). Broadly, I am interested in how we can construct rich representations of the environment, both bioloigical and artificial, that allow for a myriad of flexible behaviors in an ever changing world.
 
-On the neuro side I study how the brain constructs flexible and general representations of the world, investigating the principles behind the brain's construction of a "cognitive map," or world model (a more AI term). I aim to understand how the brain can represent its environment efficiently enough to support flexible navigation and how I am particularly interested in how that representation gets updated when the environment changes.
+On the neuro side I investigate the principles behind the brain's construction of a "cognitive map," or world model. I aim to understand how the brain can represent its environment efficiently enough to support flexible navigation and I am particularly interested in how that representation gets updated when the environment changes.
 
 On the AI side I attempt to apply this work back to machine learning and deep learning, using inspiration from the brain to develop models that learn more flexible representations of the world that can be updated continuously.
 
